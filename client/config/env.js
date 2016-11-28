@@ -3,7 +3,7 @@ var React_APP = /^REACT_APP_/i;
 function getClientEnvironment(publicUrl){
   var processEnv = Object
     .keys(process.env)
-    .filter(key => REACT_APP.test(key))
+    .filter(key => React_APP.test(key))
     .reduce((env,key) => {
       env[key] = JSON.stringify(process.env(key));
       return env;

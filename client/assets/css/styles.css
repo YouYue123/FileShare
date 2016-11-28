@@ -48,14 +48,18 @@ h2 {
 }
 
 .panel {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    width: 50%;
+    margin-left : auto;
+    margin-right:auto;
 }
 
 #upload-input {
     display: none;
 }
 
+input[type=file]{
+  display: none;
+}
 @media (min-width: 768px) {
     .main-container {
         width: 100%;

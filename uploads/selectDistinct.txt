@@ -1,0 +1,13 @@
+11/28/2016 14:11:03.501	(5694)	[E] [TABLE ACC]	Database error (5): SQL call failed.
+DB vendor code: 80
+DB vendor message: HY000
+Supplemental code: 1
+Supplemental message: [Hortonworks][Hardy] (80) Syntax or semantic analysis error thrown in server while execurint query. Error message from server: Error while compiling statement: FAILED: SemanticException Line 1:6119 Table not found 'casa_acct_dly' in definition of VIEW v_casa_acct_dly [
+select distinct `casa_acct_dly`.`n_acct`,`casa_acct_dly`.`c_orig_ccy`,`casa_acct_dly`.`d_bus_dte`,`casa_acct_dly`.`n_acct_ccy`,`casa_acct_dly`.`c_dmcl_br`,`casa_acct_dly`.`n_cust`,`casa_acct_dly`.`c_prod`,`casa_acct_dly`.`d_acct_open`,`casa_acct_dly`.`d_acct_clse`,`casa_acct_dly`.`d_acct_dor`,`casa_acct_dly`.`c_acct_sts`,`casa_acct_dly`.`c_acct_clse_reason`,`casa_acct_dly`.`c_acct_grd`,`casa_acct_dly`.`d_lst_doll`,`casa_acct_dly`.`d_lst_ndoll`,`casa_acct_dly`.`d_lst_cntct`,`casa_acct_dly`.`c_od_prod`,`casa_acct_dly`.`a_od_lmt`,`casa_acct_dly`.`k_demand`,`casa_acct_dly`.`k_pastdue`,`casa_acct_dly`.`c_od_rpyst`,`casa_acct_dly`.`d_od_strt`,`casa_acct_dly`.`d_od_lst_chng`,`casa_acct_dly`.`a_curr_bal`,`casa_acct_dly`.`c_stmt_cyl`,`casa_acct_dly`.`c_s [sdbsrc:291]
+11/28/2016 14:11:03.503	(5694)	[E] [TABLE ACC]	CODE 11528: Database Error
+Database error (5): SQL call failed.
+DB vendor code: 80
+DB vendor message: HY000
+Supplemental code: 1
+Supplemental message: [Hortonworks][Hardy] (80) Syntax or semantic analysis error thrown in server while execurint query. Error message from server: Error while compiling statement: FAILED: SemanticException Line 1:6119 Table not found 'casa_acct_dly' in definition of VIEW v_casa_acct_dly [
+select distinct `casa_acct_dly`.`n_acct`,`casa_acct_dly`.`c_orig_ccy`,`casa_acct_dly`.`d_bus_dte`,`casa_acct_dly`.`n_acct_ccy`,`casa_acct_dly`.`c_dmcl_br`,`casa_acct_dly`.`n_cust`,`casa_acct_dly`.`c_prod`,`casa_acct_dly`.`d_acct_open`,`casa_acct_dly`.`d_acct_clse`,`casa_acct_dly`.`d_acct_dor`,`casa_acct_dly`.`c_acct_sts`,`casa_acct_dly`.`c_acct_clse_reason`,`casa_acct_dly`.`c_acct_grd`,`casa_acct_dly`.`d_lst_doll`,`casa_acct_dly`.`d_lst_ndoll`,`casa_acct_dly`.`d_lst_cntct`,`casa_acct_dly`.`c_od_prod`,`casa_acct_dly`.`a_od_lmt`,`casa_acct_dly`.`k_demand`,`casa_acct_dly`.`k_pastdue`,`casa_acct_dly`.`c_od_rpyst`,`casa_acct_dly`.`d_od_strt`,`casa_acct_dly`.`d_od_lst_chng`,`casa_acct_dly`.`a_curr_bal`,`casa_acct_dly`.`c_stmt_cyl`,`casa_acct_dly`.`c_s [sdbsrc:276]

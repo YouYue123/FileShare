@@ -12,8 +12,10 @@ var nodePaths = (process.env.NODE_PATH || '')
   .map(resolveApp)
 
 module.exports = {
-  appPublic : resolveApp('public'),
-  appIndexJs: resolveApp('src/index.js'),
-  appSrc: resolveApp('src')
+  appPublic : resolveApp('client/public'),
+  appBuild: resolveApp('client/build'),
+  appHtml: resolveApp('client/public/index.html'),
+  appIndexJs: resolveApp('client/src/index.js'),
+  appSrc: resolveApp('client/src'),
   nodePaths : nodePaths
 }

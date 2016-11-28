@@ -5,21 +5,34 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "devClient": "webpack-dev-server --inline --content-base ./client/config/webpack.config.dev.js --env.dev",
-    "lint": "eslint app test"
+    "devClient": "webpack-dev-server --inline --content-base ./client/ --env.dev --config client/webpack.config.js",
+    "lint": "eslint client/src develop"
   },
   "dependencies": {
+    "axios": "^0.15.3",
+    "bootstrap": "^3.3.7",
+    "case-sensitive-paths-webpack-plugin": "^1.1.4",
     "cfenv": "1.0.x",
+    "css-loader": "^0.26.0",
     "express": "4.13.x",
     "express-fileupload": "0.0.5",
+    "file-loader": "^0.9.0",
+    "find-cache-dir": "^0.1.1",
     "formidable": "^1.0.17",
-    "socket.io": "^1.5.1"
+    "promise": "^7.1.1",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "react-router": "^3.0.0",
+    "socket.io": "^1.5.1",
+    "style-loader": "^0.13.1",
+    "whatwg-fetch": "^2.0.1"
   },
   "repository": {},
   "engines": {
     "node": "4.x"
   },
   "devDependencies": {
+    "autoprefixer": "^6.5.3",
     "babel-core": "6.13.2",
     "babel-loader": "6.2.4",
     "babel-plugin-istanbul": "1.0.3",
@@ -29,11 +42,14 @@
     "babel-register": "6.11.6",
     "eslint": "^3.11.0",
     "eslint-config-kentcdodds": "^11.1.0",
+    "eslint-loader": "^1.6.1",
+    "html-webpack-plugin": "^2.24.1",
+    "mocha": "^3.2.0",
+    "nyc": "^10.0.0",
+    "react-dev-utils": "^0.3.0",
     "webpack": "2.1.0-beta.20",
     "webpack-config-utils": "2.0.0",
     "webpack-dev-server": "2.1.0-beta.0",
-    "webpack-validator": "2.2.7",
-    "mocha": "^3.2.0",
-    "nyc": "^10.0.0"
+    "webpack-validator": "2.2.7"
   }
 }
