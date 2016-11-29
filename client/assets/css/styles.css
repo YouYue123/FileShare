@@ -5,16 +5,12 @@
 html,
 body {
     height: 100%;
-    background-color: #b7a694;
+    background-color: #fff;
 }
 
 body {
     text-align: center;
     font-family: 'Raleway', sans-serif;
-}
-
-.row {
-    margin-top: 80px;
 }
 
 .upload-btn {
