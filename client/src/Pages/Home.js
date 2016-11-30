@@ -1,7 +1,9 @@
 import React,{Component} from 'react';
 import ReactDOM from 'react-dom';
-import UploadForm from './UploadForm';
-import FileList from './FileList';
+import MainBoard from '../Components/MainBoard/MainBoard';
+import SideMenu from '../Components/SideMenu/SideMenu';
+import UploadForm from '../Components/MainBoard/UploadCard/UploadForm';
+import FileList from '../Components/MainBoard/HistoryCard/FileList';
 import axios from 'axios';
 export default class Home extends Component{
 
@@ -26,9 +28,9 @@ export default class Home extends Component{
 
   render(){
     return(
-      <div>
-  
-        <FileList fileList={this.state.files} />
+      <div className="container-fluid">
+        <SideMenu />
+        <MainBoard />
       </div>
     );
   }

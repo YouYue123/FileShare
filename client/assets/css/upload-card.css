@@ -1,0 +1,11 @@
+.upload-card{
+  height: 100%;
+  padding: 20px 20px 20px 20px;
+  background: #FFFFFF;
+}
+.upload-container{
+  height: 100%;
+  width: 100%;
+  background-color: #FFFFFF;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}

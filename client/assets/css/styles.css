@@ -5,14 +5,26 @@
 html,
 body {
     height: 100%;
-    background-color: #fff;
-}
-
-body {
+    background-color: #EEF4F9;
     text-align: center;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto';
 }
 
+.main-container{
+  height: 100%;
+  weight: 100%;
+}
+
+.container-fluid{
+  padding : 0px;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.row{
+  margin: 0px;
+}
 .upload-btn {
     color: #ffffff;
     background-color: #F89406;
