@@ -4,6 +4,7 @@ export default class HistoryCardTitle extends Component{
   render(){
     return(
       <div className="row history-card-title">
+        Update History
       </div>
     );
   }

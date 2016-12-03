@@ -9,3 +9,15 @@
   background-color: #FFFFFF;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
+.upload-container-title{
+  color: #697B8C;
+  font-size: 18px;
+  font-weight: 100;
+}
+.upload-title-container{
+  margin-top : 100px;
+  height: 20%;
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+}

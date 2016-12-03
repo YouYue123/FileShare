@@ -19,13 +19,20 @@
   font-weight: 100;
 }
 .overview-card-content{
-  height: 70%;
+  height: 80%;
   display: flex;
   padding-top : 20px;
   justify-content: space-around;
+  align-items:flex-start;;
   font-size: 18px;
   color: #697B8C;
   font-weight: 100;
+}
+.overview-content-container{
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 .overview-content-title{
   font-size: 18px;
@@ -39,4 +46,5 @@
   color:#6C6C6C;
   display: flex;
   align-items: center;
+  margin-top: 50px;
 }

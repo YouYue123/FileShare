@@ -45,20 +45,10 @@ export default class UploadForm extends Component{
   }
   render(){
     return(
-        <div className="row">
-              <div className="col-xs-12">
-                  <div className="panel panel-default">
-                      <div className="panel-body">
-                          <span className="glyphicon glyphicon-cloud-upload"></span>
-                          <h2>File Uploader</h2>
-                          <h4>Author: IRONMAN</h4>
-                          <StatusBar progress={this.state.progress}/>
-                          <button className="btn btn-lg upload-btn" type="button" onClick={this.clickUpLoadBtnHandler}>Upload File</button>
-                          <input className="file" type="file" name="file" ref="file" defaultValue={this.state.file} onChange={this.handleFileChange}/>
-                      </div>
-                  </div>
-              </div>
-         </div>
+          <div>
+            <button className="btn upload-btn" type="button" onClick={this.clickUpLoadBtnHandler}>  <span className="glyphicon glyphicon-cloud-upload"></span> Upload CSV</button>
+            <input className="file" type="file" name="file" ref="file" defaultValue={this.state.file} onChange={this.handleFileChange}/>
+          </div>
     );
   }
 }
