@@ -1,7 +1,8 @@
 import React,{Component} from 'react';
 import ReactDOM from 'react-dom';
 import {Line} from 'react-chartjs';
-import UploadForm from './UploadCard/UploadForm'
+import UploadForm from './UploadCard/UploadForm';
+import DragZone from './UploadCard/Dragzone';
 export default class UploadCard extends Component{
   render(){
     const chartData =  {
@@ -23,11 +24,10 @@ export default class UploadCard extends Component{
       <div className="upload-card col-xs-5">
         <div className = "upload-container">
           <div className="row upload-title-container">
-            <div className="col-xs-6 upload-container-title">BP Stats</div>
-            <UploadForm />
+            <div className="col-xs-6 upload-container-title">Upload Your File</div>
           </div>
-          <div className="row chart-container">
-            <Line data={chartData} />
+          <div className="row upload-content-container">
+            <DragZone />
           </div>
         </div>
       </div>

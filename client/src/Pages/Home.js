@@ -30,7 +30,7 @@ export default class Home extends Component{
     return(
       <div className="container-fluid">
         <SideMenu />
-        <MainBoard />
+        <MainBoard fileList={this.state.files}/>
       </div>
     );
   }

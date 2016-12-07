@@ -8,7 +8,7 @@ router.use('/upload',require('./upload.js'));
 router.use('/files',require('./file.js'));
 
 router.get('/',function(req,res){
-    res.sendFile(path.resolve(__dirname + '/../public/index.html'));
+    res.sendFile(path.resolve(__dirname + '/../client/index.html'));
 });
 
 

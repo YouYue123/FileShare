@@ -15,10 +15,9 @@ export default class MainBoard extends Component{
       <div className="main-board">
           <TopMenu />
           <div className="row card-row">
-            <OverviewCard />
             <UploadCard />
           </div>
-          <HistoryCard />
+          <HistoryCard fileList={this.props.fileList}/>
       </div>
     );
   }

@@ -30,12 +30,13 @@ export default class UploadForm extends Component{
     var config = {
            onUploadProgress: (progressEvent) => {
              var percentCompleted = progressEvent.loaded / progressEvent.total * 100;
+             console.log(percentCompleted);
              this.setState({
                progress : percentCompleted + "%"
              })
            }
     };
-    axios.post('http://localhost:6004/upload',formData,config)
+    axios.post('https://localhost:3001/upload',formData,config)
       .then((res) => {
         console.log(res);
       })
@@ -46,7 +47,11 @@ export default class UploadForm extends Component{
   render(){
     return(
           <div>
-            <button className="btn upload-btn" type="button" onClick={this.clickUpLoadBtnHandler}>  <span className="glyphicon glyphicon-cloud-upload"></span> Upload CSV</button>
+            <button className="btn upload-btn" type="button" onClick={this.clickUpLoadBtnHandler}>
+              <span className="glyphicon glyphicon-cloud-upload"></span>
+                Upload File
+                <StatusBar progress={this.state.progress} />
+            </button>
             <input className="file" type="file" name="file" ref="file" defaultValue={this.state.file} onChange={this.handleFileChange}/>
           </div>
     );

@@ -21,3 +21,42 @@
   justify-content:space-around;
   align-items: center;
 }
+
+.upload-content-container{
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.drag-zone{
+  width: 80%;
+  height: 80%;
+  border-width: 1px;
+  border-color: rgb(102, 102, 102);
+  border-style: dashed;
+  border-radius: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: rgba(0,0,0,0.05);
+}
+.drag-zone-enter{
+  width: 80%;
+  height: 80%;
+  border-width: 1px;
+  border-color: rgb(102, 102, 102);
+  border-style: dashed;
+  border-radius: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: rgba(0,0,0,0.2);
+}
+.progress{
+  width: 80%;
+  height: 20px;
+  margin-top: 20px;
+}

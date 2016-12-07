@@ -10,7 +10,7 @@ body {
 td,th{
   color:#6C6C6C;
   font-size : 18px;
-  text-align: left;
+  text-align: center;
 }
 .main-container{
   height: 100%;
@@ -26,20 +26,6 @@ td,th{
 
 .row{
   margin: 0px;
-}
-.upload-btn {
-    color: #ffffff;
-    background-color: #4990E2;
-    border: none;
-}
-
-.upload-btn:hover,
-.upload-btn:focus,
-.upload-btn:active,
-.upload-btn.active {
-    color: #ffffff;
-    background-color: #4990E2;
-    border: none;
 }
 
 h4 {
@@ -61,22 +47,6 @@ h2 {
     margin-left : auto;
     margin-right:auto;
 }
-
-#upload-input {
-    display: none;
-}
-
-input[type=file]{
-  display: none;
-}
-@media (min-width: 768px) {
-    .main-container {
-        width: 100%;
-    }
-}
-
-@media (min-width: 992px) {
-    .container {
-        width: 450px;
-    }
+.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus{
+  outline: 0px;
 }

@@ -7,8 +7,7 @@ export default class HistoryCard extends Component{
     return(
       <div className="row history-card">
         <div className="history-container">
-          <HistoryCardTitle />
-          <HistoryCardContent />
+          <HistoryCardContent fileList={this.props.fileList}/>
         </div>
       </div>
     );

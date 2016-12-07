@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node app.js",
     "devClient": "webpack-dev-server --inline --content-base ./client/ --env.dev --config client/webpack.config.js",
-    "lint": "eslint client/src develop"
+    "lint": "eslint client/src develop",
+    "buildClient": "webpack --env.prod --config client/webpack.config.js"
   },
   "dependencies": {
     "axios": "^0.15.3",
@@ -15,6 +16,7 @@
     "cfenv": "1.0.x",
     "chart.js": "^1.1.1",
     "css-loader": "^0.26.0",
+    "dropzone": "^4.3.0",
     "express": "4.13.x",
     "express-fileupload": "0.0.5",
     "file-loader": "^0.9.0",
@@ -24,7 +26,10 @@
     "react": "^15.4.1",
     "react-chartjs": "^0.8.0",
     "react-dom": "^15.4.1",
+    "react-dropzone": "^3.7.3",
+    "react-redux": "^4.4.6",
     "react-router": "^3.0.0",
+    "redux": "^3.6.0",
     "socket.io": "^1.5.1",
     "style-loader": "^0.13.1",
     "victory": "^0.13.7",
