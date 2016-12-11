@@ -1,24 +1,7 @@
 import React,{Component} from 'react';
-import ReactDOM from 'react-dom';
-import axios from 'axios';
 export default class ListItem extends Component{
-  constructor(){
-    super();
-    this.deleteFile = this.deleteFile.bind(this);
-  }
-
-  deleteFile(e){
-    e.preventDefault();
-    axios.delete("http://localhost:6004/files/" + this.props.fileInfo.name)
-      .then((res) =>{
-        console.log(res);
-      })
-      .catch((err) => {
-         alert(err);
-         console.error(err);
-      })
-  }
   render(){
+    console.log(this.props)
     return(
       <tr>
         <th scope="row">{this.props.id + 1}</th>
@@ -30,7 +13,7 @@ export default class ListItem extends Component{
             <span className="glyphicon glyphicon-download" aria-hidden="true"></span> Download
           </a>
           &nbsp;
-          <button type="button" className="btn btn-danger" onClick={this.deleteFile}>
+          <button type="button" className="btn btn-danger" onClick={this.props.onClickDelete}>
             <span className="glyphicon glyphicon-erase" aria-hidden="true"></span> Delete
           </button>
         </td>

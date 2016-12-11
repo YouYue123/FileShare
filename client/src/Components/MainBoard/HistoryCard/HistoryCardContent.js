@@ -1,12 +1,13 @@
 import React,{Component} from 'react';
 import ReactDOM from 'react-dom';
-import ListItem from './ListItem';
+import ListItemContainer from '../../../containers/ListItemContainer';
 export default class HistoryCardContent extends Component{
   render(){
+
+    //console.log(this.props.fileList);
     const List = this.props.fileList.map((file,i) => {
-      return <ListItem fileInfo={file} key={i} id={i}/>
+      return <ListItemContainer fileInfo={file} key={i} id={i}/>
     });
-    console.log(List);
     return(
       <div className="row history-card-content">
         <table className="table table-striped">

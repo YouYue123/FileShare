@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import ReactDOM from 'react-dom';
+import '../../../../assets/css/top-menu.css'
 export default class TopMenu extends Component{
   render(){
     const iconList = [

@@ -10,7 +10,6 @@ app.all('*', function(req, res, next) {
        next();
 });
 
-// serve the files out of ./public as our main files
 app.use(express.static(__dirname + '/client'));
 app.use(express.static(__dirname + '/uploads'));
 app.use(require('./controllers'));

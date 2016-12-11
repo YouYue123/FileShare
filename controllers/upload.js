@@ -10,7 +10,6 @@ router.post('/', function(req, res) {
 
     // create an incoming form object
     var form = new formidable.IncomingForm();
-
     // specify that we want to allow the user to upload multiple files in a single request
     form.multiples = true;
 
@@ -28,9 +27,9 @@ router.post('/', function(req, res) {
     form.on('end', function() {
         res.end('success');
     });
-
     // parse the incoming request containing the form data
     form.parse(req);
+
 });
 
 module.exports = router;

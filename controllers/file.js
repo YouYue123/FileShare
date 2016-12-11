@@ -13,7 +13,7 @@ router.get('/',function(req,res){
 			res.status(501).end();
 		}
 	 files = files.map((file) => {
-			let fileInfo = fs.statSync(uploadFolder +'/'+file);
+			var fileInfo = fs.statSync(uploadFolder +'/'+file);
 			return{
 				name : file,
 				time : fileInfo.ctime,

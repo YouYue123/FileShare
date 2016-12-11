@@ -1,7 +1,8 @@
 import React,{Component} from 'react';
 import ReactDOM from 'react-dom';
-import OverviewCardTitle from './OverviewCard/OverviewCardTitle';
-import OverviewCardContent from './OverviewCard/OverviewCardContent';
+import OverviewCardTitle from './OverviewCardTitle';
+import OverviewCardContent from './OverviewCardContent';
+import '../../../../assets/css/overview-card.css'
 export default class OverviewCard extends Component{
   render(){
     return(
