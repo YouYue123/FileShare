@@ -1,7 +1,6 @@
 import React,{Component} from 'react';
 export default class ListItem extends Component{
   render(){
-    console.log(this.props)
     return(
       <tr>
         <th scope="row">{this.props.id + 1}</th>

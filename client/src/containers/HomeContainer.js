@@ -3,7 +3,6 @@ import {connect} from 'react-redux'
 import {getFileList} from '../actions/fileListActions'
 import MainBoard from '../components/MainBoard'
 import SideMenu from '../components/SideMenu'
-
 class HomeContainer extends Component{
   constructor(props){
     super(props);
@@ -14,7 +13,6 @@ class HomeContainer extends Component{
     dispatch(getFileList())
   }
   render(){
-    console.log(this.props);
     return(
       <div className="container-fluid">
         <SideMenu />

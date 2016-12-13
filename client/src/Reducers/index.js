@@ -32,7 +32,6 @@ const uploadProgress = (state=0.0,action) => {
       return state
   }
 }
-
 const fileShareApp = combineReducers({
   fileList,
   uploadProgress,

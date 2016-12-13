@@ -1,18 +1,22 @@
 import React,{Component} from 'react'
-import {deleteFile} from '../actions/fileListActions'
+import {deleteFile,getFileList} from '../actions/fileListActions'
 import {connect} from 'react-redux'
 import ListItem from '../components/MainBoard/HistoryCard/ListItem'
+import io from 'socket.io-client'
+const socket = io('https://fileshare.au-syd.mybluemix.net/')
 class ListItemContainer extends Component{
   constructor(props){
     super(props)
     this.deleteFile = this.deleteFile.bind(this);
+    socket.on('update-file-list',(data)=>{
+      this.props.dispatch(getFileList())
+    })
   }
   deleteFile(e){
     e.preventDefault();
     this.props.dispatch(deleteFile(this.props.fileInfo.name))
   }
   render(){
-    console.log(this.props);
     return(
       <ListItem onClickDelete={this.deleteFile} fileInfo={this.props.fileInfo} key={this.props.key} id= {this.props.id}/>
     )

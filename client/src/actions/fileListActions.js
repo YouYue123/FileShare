@@ -1,5 +1,5 @@
 import axios from 'axios'
-const apiEndPoint = "http://localhost:6004"
+import {showNotification} from '../helpers/notification'
 export const REQUEST_FILE_LIST = 'REQUEST_FILE_LIST'
 export const RECEIVE_FILE_LIST = 'RECEIVE_FILE_LIST'
 export const ERROR_FILE_LIST = 'ERROR_FILE_LIST'
@@ -52,7 +52,7 @@ export function deleteFile(fileName){
     return dispatch => {
       axios.delete('/files/' + fileName)
         .then((res) =>{
-          dispatch(getFileList())
+          showNotification('delete successful')
         })
         .catch((err) => {
            alert(err);

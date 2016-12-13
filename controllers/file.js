@@ -25,15 +25,16 @@ router.get('/',function(req,res){
 });
 router.delete('/:fileName',function(req,res){
 	 var fileName = req.params.fileName;
-	 console.log(fileName);
 	 fs.unlink(uploadFolder + "/" +fileName,(err)=>{
 		 if(err){
 			 	res.sendStatus(501).end();
 		 }
 		 else{
+			 	req.app.get('socket-io').emit('update-file-list')
 			  res.sendStatus(200).end();
 		 }
 	 })
 });
+
 
 module.exports = router;

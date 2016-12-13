@@ -1,4 +1,5 @@
-import axios from 'axios';
+import axios from 'axios'
+import {showNotification} from '../helpers/notification'
 import {getFileList} from './fileListActions'
 export const DRAG_INTO = 'DRAG_INTO'
 export const DRAG_OUT = 'DRAG_OUT'
@@ -39,7 +40,7 @@ export const onDrop = (formData) => {
     axios.post('https://fileshare.au-syd.mybluemix.net/upload',formData,config)
       .then((res) => {
         dispatch(onDragLeave())
-        dispatch(getFileList())
+        showNotification('upload successful')
       })
       .catch((err) => {
         alert(err);

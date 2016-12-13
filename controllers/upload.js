@@ -16,6 +16,7 @@ router.post('/', function(req, res) {
     // store all uploads in the /uploads directory
     form.uploadDir = path.join(__dirname, '/../uploads/');
     form.on('fileBegin',function(name,file){
+        console.log('File Transfer Begin -- ' + file.name);
         file.path = form.uploadDir + file.name
     });
     // log any errors that occur
@@ -25,6 +26,8 @@ router.post('/', function(req, res) {
 
     // once all the files have been uploaded, send a response to the client
     form.on('end', function() {
+        console.log('File Transfer End');
+        req.app.get('socket-io').emit('update-file-list')
         res.end('success');
     });
     // parse the incoming request containing the form data

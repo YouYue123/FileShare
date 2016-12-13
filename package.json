@@ -4,7 +4,7 @@
   "private": true,
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "node app.js ",
     "devClient": "webpack-dev-server --inline --content-base ./client/ --env.dev --config client/webpack.config.js",
     "lint": "eslint client/src develop",
     "buildClient": "webpack --env.prod --config client/webpack.config.js"
@@ -12,7 +12,8 @@
   "dependencies": {
     "cfenv": "1.0.x",
     "express": "4.13.x",
-    "formidable": "^1.0.17"
+    "formidable": "^1.0.17",
+    "socket.io": "^1.7.2"
   },
   "repository": {},
   "engines": {
@@ -59,6 +60,7 @@
     "socket.io": "^1.5.1",
     "whatwg-fetch": "^2.0.1",
     "file-loader": "^0.9.0",
-    "find-cache-dir": "^0.1.1"
+    "find-cache-dir": "^0.1.1",
+    "socket.io-client": "^1.7.2"
   }
 }
