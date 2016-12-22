@@ -2,8 +2,7 @@ import React,{Component} from 'react'
 import {deleteFile,getFileList} from '../actions/fileListActions'
 import {connect} from 'react-redux'
 import ListItem from '../components/MainBoard/HistoryCard/ListItem'
-import io from 'socket.io-client'
-const socket = io('https://fileshare.au-syd.mybluemix.net/')
+import {socket} from '../helpers/config'
 class ListItemContainer extends Component{
   constructor(props){
     super(props)

@@ -1,0 +1,14 @@
+.clip-board{
+  position: absolute;
+  bottom: 120px;
+  right: 50px;
+  width : 500px;
+  height : 500px;
+}
+.invisible-clip-board{
+  display: none;
+}
+.clip-text-area{
+  width: 100%;
+  height: 100%;
+}

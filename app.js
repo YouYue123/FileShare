@@ -1,10 +1,16 @@
 var express = require('express');
 var cfenv = require('cfenv');
+var bodyParser = require('body-parser')
 // create a new express server
 var app = express();
 var server = require('http').Server(app)
 var io = require('socket.io')(server);
 app.set('socket-io',io);
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }))
+// parse application/json
+app.use(bodyParser.json())
+
 app.all('*', function(req, res, next) {
        res.header("Access-Control-Allow-Origin", "*");
        res.header("Access-Control-Allow-Headers", "X-Requested-With");
