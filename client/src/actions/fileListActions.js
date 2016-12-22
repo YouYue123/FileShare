@@ -1,5 +1,6 @@
 import axios from 'axios'
 import {showNotification} from '../helpers/notification'
+import {config} from '../helpers/config'
 export const REQUEST_FILE_LIST = 'REQUEST_FILE_LIST'
 export const RECEIVE_FILE_LIST = 'RECEIVE_FILE_LIST'
 export const ERROR_FILE_LIST = 'ERROR_FILE_LIST'
@@ -43,14 +44,14 @@ function errorFileList(error){
 export function getFileList(){
     return dispatch => {
       dispatch(requestFileList())
-      return axios.get('/files')
+      return axios.get(config.apiEndPoint + '/files')
           .then(response => dispatch(receiveFileList(response)))
           .catch(error => dispatch(errorFileList(error)))
     }
 }
 export function deleteFile(fileName){
     return dispatch => {
-      axios.delete('/files/' + fileName)
+      axios.delete(config.apiEndPoint + '/files/' + fileName)
         .then((res) =>{
           showNotification('delete successful')
         })
