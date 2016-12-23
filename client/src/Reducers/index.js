@@ -3,6 +3,7 @@ import {REQUEST_FILE_LIST,RECEIVE_FILE_LIST,ERROR_FILE_LIST} from '../actions/fi
 import {DRAG_INTO,DRAG_OUT,UPDATE_UPLOAD_PROGRESS} from '../actions/dragUploadActions'
 import {RECEIVE_TEXT} from '../actions/textAreaActions'
 import {TOGGLE_FLOAT_BUTTON} from '../actions/floatButtonActions'
+import {RECEIVE_TOKEN} from '../actions/authenticateActions'
 const fileList = (state={
     list: [],
     loading: false,
@@ -50,12 +51,23 @@ const textAreaStatus = (state=false,action) => {
       return state
   }
 }
+
+const token = (state='',action) => {
+  switch(action.type){
+    case RECEIVE_TOKEN:
+      return action.token
+    default:
+      return state
+  }
+}
+
 const fileShareApp = combineReducers({
   fileList,
   uploadProgress,
   uploadFormStyle,
   textAreaText,
-  textAreaStatus
+  textAreaStatus,
+  token
 })
 
 export default fileShareApp

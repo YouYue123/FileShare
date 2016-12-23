@@ -11,11 +11,12 @@ const store = createStore(
   applyMiddleware(thunkMiddleware)
 )
 export default class Home extends Component{
+
   render(){
     return(
       <Provider store={store}>
         <HomeContainer />
       </Provider>
-    );
+    )
   }
 }
