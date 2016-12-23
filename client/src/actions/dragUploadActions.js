@@ -30,7 +30,7 @@ function trackUploadProgress(percentCompleted){
 export const onDrop = (formData) => {
   return dispatch=>{
 
-    var config = {
+    var axiosConfig = {
            onUploadProgress: (progressEvent) => {
              var percentCompleted = progressEvent.loaded / progressEvent.total * 100
              if(isNaN(percentCompleted) === false){
@@ -38,7 +38,8 @@ export const onDrop = (formData) => {
              }
            }
     };
-    axios.post(config.apiEndPoint + '/upload',formData,config)
+
+    axios.post('/upload',formData,axiosConfig)
       .then((res) => {
         dispatch(onDragLeave())
         showNotification('upload successful')

@@ -44,14 +44,14 @@ function errorFileList(error){
 export function getFileList(){
     return dispatch => {
       dispatch(requestFileList())
-      return axios.get(config.apiEndPoint + '/files')
+      return axios.get('/files')
           .then(response => dispatch(receiveFileList(response)))
           .catch(error => dispatch(errorFileList(error)))
     }
 }
 export function deleteFile(fileName){
     return dispatch => {
-      axios.delete(config.apiEndPoint + '/files/' + fileName)
+      axios.delete('/files/' + fileName)
         .then((res) =>{
           showNotification('delete successful')
         })

@@ -4,7 +4,8 @@ var bodyParser = require('body-parser')
 // create a new express server
 var app = express();
 var server = require('http').Server(app)
-var io = require('socket.io')(server);
+var io = require('socket.io')(server)
+var socketList = []
 app.set('socket-io',io);
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -13,8 +14,7 @@ app.use(bodyParser.json())
 
 app.all('*', function(req, res, next) {
        res.header("Access-Control-Allow-Origin", "*");
-       res.header("Access-Control-Allow-Headers", "X-Requested-With");
-       res.header('Access-Control-Allow-Headers', 'Content-Type');
+       res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
        res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
        next();
 });

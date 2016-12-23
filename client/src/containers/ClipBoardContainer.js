@@ -14,6 +14,7 @@ class ClipBoardContainer extends Component{
     })
   }
   changeHandler(e) {
+    this.props.dispatch(receiveText(e.target.value))
     this.props.dispatch(changeText(e.target.value))
   }
 
