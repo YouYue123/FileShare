@@ -2,19 +2,37 @@ var express = require('express')
 var cfenv = require('cfenv')
 var bodyParser = require('body-parser')
 var fs = require('fs')
+let wav = require('wav')
 var rs = new require('stream').Readable();
+var toBuffer = require('typedarray-to-buffer')
 var app = express()
 var server = require('http').Server(app)
 var io = require('socket.io')(server)
 var voiceAuthen = require('./helpers/voiceAuthen.js')
+var fileWriter = new wav.FileWriter('./uploads/test.wav');
 var socketList = []
 app.set('socket-io',io)
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
-//voiceAuthen.voiceToText(fs.createReadStream('./uploads/sample.wav'))
+//voiceAuthen.voiceToText(rs)
 io.on('connection',socket=>{
   console.log(socket.id + ' connected')
-  socket.on('audioChunk', (data) => rs.push(data))
+  socket.on('audioChunk', (data) => {
+      //var bufView = new Uint8Array(data.voice)
+      //wsstream.write(data.voice)
+      console.log(data.voice)
+      //const voiceData = new Float32Array(data.voice)
+      // wav.encode(voiceData,{})
+      // wsstream.write(voiceData.buffer)
+      // //rs.push(data.data)
+      // stream.pipe(fileWriter);
+      // stream.on('end', function() {
+      //   fileWriter.end();
+      // });
+      fileWriter.write(data.voice)
+      //fileWriter.end()
+    }
+  )
 })
 
 app.all('*', function(req, res, next) {

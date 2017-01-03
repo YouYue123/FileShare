@@ -10,12 +10,16 @@
     "buildClient": "webpack --env.prod --config client/webpack.config.js"
   },
   "dependencies": {
+    "binaryjs": "^0.2.1",
     "body-parser": "^1.15.2",
     "cfenv": "1.0.x",
     "express": "^4.13.4",
     "formidable": "^1.0.17",
+    "node-wav": "0.0.2",
     "socket.io": "^1.7.2",
-    "watson-developer-cloud": "^2.14.3"
+    "typedarray-to-buffer": "^3.1.2",
+    "watson-developer-cloud": "^2.14.3",
+    "wav": "^1.0.1"
   },
   "repository": {},
   "engines": {
