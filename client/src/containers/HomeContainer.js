@@ -21,10 +21,17 @@ class HomeContainer extends Component{
                   navigator.mozGetUserMedia || navigator.msGetUserMedia);
     }
 
+    const convertFloat32ToInt16 = (buffer) => {
+      var l = buffer.length;
+      var buf = new Int16Array(l);
+      while (l--) {
+        buf[l] = Math.min(1, buffer[l])*0x7FFF;
+      }
+      return buf.buffer;
+    }
     const recorderProcess = e => {
       const left = e.inputBuffer.getChannelData(0)
-      console.log('recorded chunk')
-      socket.emit('audioChunk',{data: left})
+      socket.emit('audioChunk',{voice: convertFloat32ToInt16(left)})
     }
 
     if(hasGetUserMedia()){
